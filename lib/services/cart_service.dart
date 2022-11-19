@@ -18,19 +18,24 @@ class CartService extends FirebaseService {
       final cartUrl = Uri.parse('$databaseUrl/cart/$userId.json?auth=$token');
       final response = await http.get(cartUrl);
       final cartMap = json.decode(response.body) as Map<String, dynamic>;
-      // print(productsMap);
+      // print(cartMap);
       if (response.statusCode != 200) {
         print(cartMap['error']);
         return carts;
       }
 
       cartMap.forEach((cartId, cart) {
+        // print("2222");
         carts.add(CartItem.fromJsonCart({
           'id': cartId,
           ...cart,
         }));
+        // print(cartId);
+        // print(CartItem.fromJsonCart({
+        //   'id': cartId,
+        //   ...cart,
+        // }));
       });
-      // print(products);
       return carts;
     } catch (error) {
       print(error);
@@ -54,8 +59,10 @@ class CartService extends FirebaseService {
   }
 
   Future<bool> updateCart(CartItem cart) async {
+    final id = cart.id;
+    // print(cart.id);
     try {
-      final url = Uri.parse('$databaseUrl/cart/$userId.json?auth=$token');
+      final url = Uri.parse('$databaseUrl/cart/$userId/$id.json?auth=$token');
       final response = await http.patch(
         url,
         body: json.encode(cart.toJsonCart()),
@@ -70,9 +77,26 @@ class CartService extends FirebaseService {
     }
   }
 
-  Future<bool> deleteProduct(String id) async {
+  Future<bool> deleteCart(String id) async {
     try {
-      final url = Uri.parse('$databaseUrl/products/$id.json?auth=$token');
+      final url = Uri.parse('$databaseUrl/cart/$userId/$id.json?auth=$token');
+      // print('2222');
+      final response = await http.delete(url);
+      if (response.statusCode != 200) {
+        throw Exception(json.decode(response.body)['error']);
+      }
+
+      return true;
+    } catch (error) {
+      print(error);
+      return false;
+    }
+  }
+
+  Future<bool> deleteAllCart() async {
+    try {
+      final url = Uri.parse('$databaseUrl/cart/$userId.json?auth=$token');
+      // print('2222');
       final response = await http.delete(url);
       if (response.statusCode != 200) {
         throw Exception(json.decode(response.body)['error']);

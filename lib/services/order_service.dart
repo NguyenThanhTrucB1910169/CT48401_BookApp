@@ -20,12 +20,11 @@ class OrdersService extends FirebaseService {
           Uri.parse('$databaseUrl/orders.json?auth=$token&$filters');
       final response = await http.get(ordersUrl);
       final ordersMap = json.decode(response.body) as Map<String, dynamic>;
-      // print(productsMap);
       if (response.statusCode != 200) {
         print(ordersMap['error']);
         return orders;
       }
-      print(ordersMap.length);
+      // print(ordersMap.length);
       ordersMap.forEach((orderId, order) {
         orders.add(OrderItem.fromJson({
           'id': orderId,
@@ -43,7 +42,7 @@ class OrdersService extends FirebaseService {
   Future<OrderItem?> addOrder(OrderItem order) async {
     try {
       final url = Uri.parse('$databaseUrl/orders.json?auth=$token');
-      print(userId);
+      // print(userId);
       final response = await http.post(
         url,
         body: json.encode(

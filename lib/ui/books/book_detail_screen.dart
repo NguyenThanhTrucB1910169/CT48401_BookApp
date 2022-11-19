@@ -22,17 +22,12 @@ class BookDetailScreen extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {
               final cart = context.read<CartManager>();
-              cart.addItem(book);
+              cart.addItem(book, context);
               ScaffoldMessenger.of(context)
                 ..hideCurrentSnackBar()
                 ..showSnackBar(SnackBar(
                   content: const Text('Thêm vào giỏ hàng'),
-                  duration: const Duration(seconds: 2),
-                  action: SnackBarAction(
-                      label: 'HỦY',
-                      onPressed: () {
-                        cart.removeSingleItem(book.id!);
-                      }),
+                  duration: const Duration(seconds: 1),
                 ));
             },
             style: ElevatedButton.styleFrom(
@@ -128,7 +123,9 @@ class BookDetailScreen extends StatelessWidget {
   Widget buiShoppingCart() {
     return Consumer<CartManager>(builder: (ctx, cartManager, child) {
       return TopRightBadge(
-        data: cartManager.productCount,
+        data: cartManager.cartCount,
+        // data: cartManager.productCount,
+
         child: Padding(
           padding: const EdgeInsets.only(right: 10.0, bottom: 4.0),
           child: IconButton(

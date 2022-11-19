@@ -29,6 +29,7 @@ class _BookScreenState extends State<BookScreen> {
         title: const Text("Book Store"),
         backgroundColor: Color(0xFF025564),
         actions: <Widget>[
+          // context.read<CartManager>().fetchCart();
           buildShoppingCartIcon(),
         ],
       ),
@@ -94,7 +95,8 @@ class _BookScreenState extends State<BookScreen> {
   Widget buildShoppingCartIcon() {
     return Consumer<CartManager>(builder: (ctx, cartManager, child) {
       return TopRightBadge(
-        data: cartManager.productCount,
+        data: context.read<CartManager>().cartCount,
+        // data: context.read<CartManager>().productCount,
         child: Padding(
           padding: const EdgeInsets.only(right: 10.0, bottom: 4.0),
           child: IconButton(

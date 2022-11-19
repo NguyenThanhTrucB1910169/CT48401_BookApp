@@ -71,6 +71,7 @@ class OrderManager with ChangeNotifier {
 
   Future<void> fetchOrders(filterByUser) async {
     _orders = await _ordersService.fetchOrders(filterByUser);
+    // print(_orders);
     notifyListeners();
   }
 

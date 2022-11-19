@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../models/book.dart';
 import '../../services/products_service.dart';
 import '../../models/auth_token.dart';
+import '../card/cart_manager.dart';
 
 class BooksManager with ChangeNotifier {
   List<Book> _items = [];

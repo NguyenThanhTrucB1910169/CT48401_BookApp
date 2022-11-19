@@ -316,7 +316,7 @@ class _EditBookScreenState extends State<EditBookScreen> {
     });
 
     if (mounted) {
-      Navigator.of(context).pop();
+      Navigator.of(context).pushReplacementNamed(UserBooksScreen.routeName);
     }
   }
 }

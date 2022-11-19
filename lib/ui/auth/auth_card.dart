@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-
+import '../card/cart_manager.dart';
 import '../../models/http_exception.dart';
+import '../shared/screens.dart';
 // import '../shared/dialog_utils.dart';
 
 import 'auth_manager.dart';
@@ -39,6 +40,7 @@ class _AuthCardState extends State<AuthCard> {
     try {
       if (_authMode == AuthMode.login) {
         // Log user in
+
         await context.read<AuthManager>().login(
               _authData['email']!,
               _authData['password']!,
@@ -194,6 +196,14 @@ class _AuthCardState extends State<AuthCard> {
             filled: true,
             fillColor: Colors.white,
             // focusColor: Colors.white,
+            focusedErrorBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                    width: 2, color: Color.fromARGB(255, 176, 207, 204)),
+                borderRadius: BorderRadius.circular(50.0)),
+            errorBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                    width: 2, color: Color.fromARGB(255, 176, 207, 204)),
+                borderRadius: BorderRadius.circular(50.0)),
             focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
@@ -228,6 +238,14 @@ class _AuthCardState extends State<AuthCard> {
             filled: true,
             fillColor: Colors.white,
             // focusColor: Colors.white,
+            focusedErrorBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                    width: 2, color: Color.fromARGB(255, 176, 207, 204)),
+                borderRadius: BorderRadius.circular(50.0)),
+            errorBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                    width: 2, color: Color.fromARGB(255, 176, 207, 204)),
+                borderRadius: BorderRadius.circular(50.0)),
             focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
@@ -265,6 +283,14 @@ class _AuthCardState extends State<AuthCard> {
             filled: true,
             fillColor: Colors.white,
             // focusColor: Colors.white,
+            focusedErrorBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                    width: 2, color: Color.fromARGB(255, 176, 207, 204)),
+                borderRadius: BorderRadius.circular(50.0)),
+            errorBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                    width: 2, color: Color.fromARGB(255, 176, 207, 204)),
+                borderRadius: BorderRadius.circular(50.0)),
             focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),

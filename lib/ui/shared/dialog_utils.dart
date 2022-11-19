@@ -47,7 +47,21 @@ Future<void> showAlertDialog(BuildContext context, String message) {
   return showDialog(
     context: context,
     builder: (ctx) => AlertDialog(
-      title: const Text('Orders Success'),
+      title: Row(
+        children: <Widget>[
+          Icon(
+            Icons.warning_amber_rounded,
+            size: 35,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Text(
+              "Thông Báo",
+              style: TextStyle(fontSize: 28),
+            ),
+          )
+        ],
+      ),
       content: Text(message),
       actions: <Widget>[
         TextButton(

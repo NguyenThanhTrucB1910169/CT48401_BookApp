@@ -1,4 +1,5 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 // import 'package:book_app/ui/auth/auth_screen.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (context) => CartManager()),
+          // ChangeNotifierProvider(create: (context) => CartManager()),
           // ChangeNotifierProvider(create: (ctx) => OrderManager()),
           ChangeNotifierProvider(create: (context) => AuthManager()),
           ChangeNotifierProxyProvider<AuthManager, OrderManager>(
@@ -36,13 +37,13 @@ class MyApp extends StatelessWidget {
               return ordersManager;
             },
           ),
-          // ChangeNotifierProxyProvider<AuthManager, CartManager>(
-          //   create: (ctx) => CartManager(),
-          //   update: (ctx, authManager, cartManager) {
-          //     cartManager!.authToken = authManager.authToken;
-          //     return cartManager;
-          //   },
-          // ),
+          ChangeNotifierProxyProvider<AuthManager, CartManager>(
+            create: (ctx) => CartManager(),
+            update: (ctx, authManager, cartManager) {
+              cartManager!.authToken = authManager.authToken;
+              return cartManager;
+            },
+          ),
           ChangeNotifierProxyProvider<AuthManager, BooksManager>(
             create: (ctx) => BooksManager(),
             update: (ctx, authManager, productsManager) {

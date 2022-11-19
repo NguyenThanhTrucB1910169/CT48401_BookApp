@@ -34,7 +34,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
     return Consumer<AuthManager>(builder: (context, authManager, child) {
       isadmin = authManager.isAdmin;
       _fetchOrders = context.read<OrderManager>().fetchOrders(isadmin);
-      print(isadmin);
+      // print(isadmin);
       return Scaffold(
           appBar: AppBar(
             title: const Text('Orders'),
@@ -48,6 +48,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.done) {
                       return ListView.builder(
+                        shrinkWrap: true,
                         itemCount: orderManager.orderCount,
                         itemBuilder: (ctx, i) =>
                             OrderItemCard(orderManager.orders[i]),
