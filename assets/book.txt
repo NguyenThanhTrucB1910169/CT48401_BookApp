@@ -51,7 +51,7 @@ Book(
         title: 'Một Thoáng Ta Rực Rỡ Ở Nhân Gian',
         author: 'Ocean Vuong',
         description: 'Một thoáng ta rực rỡ ở nhân gian viết dưới dạng một lá thư của nhân vật chính, Chó Con, gửi cho người mẹ không biết chữ của mình. Dưới dạng những mẩu chuyện nhỏ, xen kẽ với những đoạn trữ tình ngoại đề, triết lý, và những bài thơ, cuốn sách kể câu chuyện đời không chỉ của Chó Con (tên gọi yêu do bà ngoại đặt cho, nhưng cũng là cách tất cả mọi người trong sách gọi cậu) từ thuở nhỏ đến lúc chớm trưởng thành',
-        price: 90.531 ,
+        price: 190.531 ,
         image: 'https://salt.tikicdn.com/cache/750x750/ts/product/2f/b5/4e/a8208e9019c8510e8a8eebe06f50299c.jpg'
 )
 Book(
@@ -64,10 +64,10 @@ Book(
 )
 Book(
         id: 'p1',
-        title: 'Chúng Ta Rồi Sẽ Hạnh Phúc, Theo Những Cách Khác Nhau',
+        title: 'Chúng Ta Rồi Sẽ Hạnh Phúc',
         author: 'Thảo Thảo',
         description: 'CHÚNG TA RỒI SẼ HẠNH PHÚC, THEO NHỮNG CÁCH KHÁC NHAU là một lời nhắn nhủ của tác giả Thảo Thảo đến tất cả mọi người rằng mỗi chúng ta đều là một cá thể duy nhất trong vũ trụ bao la rộng lớn, đừng bao giờ cho người khác quyền mang lại niềm vui hay nỗi buồn cho bạn. Hãy sống với những gì bạn muốn, làm nhũng gì bạn cho là đúng, bởi nếu cứ sống vì người khác, bạn sẽ đánh mất những-gì-đặc-biệt-nhất của bản thân mình.',
-        price: 57.600 ,
+        price: 157.600 ,
         image: 'https://salt.tikicdn.com/cache/750x750/ts/product/37/7f/04/0e29466f6e96224b9a9980bb8643bdc4.jpg'
 )
 Book(
@@ -75,7 +75,7 @@ Book(
         title: 'Không Phải Sói Nhưng Cũng Đừng Là Cừu',
         author: 'Lê Bảo Ngọc',
         description: 'Những câu hỏi đầy tính tranh cãi như “Cứu người hay cứu chó?”, “Một kẻ thô lỗ trong lớp vỏ “thẳng tính” khác với người EQ thấp như thế nào?”, “Vì sao một bộ phận nữ giới lại victim blaming đối với nạn nhân bị xâm hại?”, được tác giả đưa ra trong “Không phải sói nhưng cũng đừng là cừu”. Bằng từng chương sách của mình, tác giả vạch rõ cho bạn rằng “thật sự thế nào mới là người tốt”, ngây thơ và xấu xa có ranh giới rõ ràng như thế không, rốt cuộc bạn có là người tốt như mình vẫn luôn nghĩ?',
-        price: 91.000 ,
+        price: 191.8,
         image: 'https://salt.tikicdn.com/cache/750x750/ts/product/09/2b/e4/e220a9a28a35a7c6ed3336e89c09178b.jpg'
 )
 Book(
@@ -83,7 +83,7 @@ Book(
         title: 'Những Điều Tốt Đẹp Luôn Đúng Hạn Mà Đến',
         author: ' Cá yêu tinh – Rei',
         description: 'Cuốn sách tựa những dòng nhật ký đầy chân thật, trong sáng và giản dị, truyền tải thông điệp tích cực: Dù có chuyện gì đi nữa thì ngày mai mặt trời vẫn mọc, dù bị thực tại làm té ngã hàng vạn lần cũng đừng quên đứng dậy, phủi bụi trên người rồi hạnh phúc sẽ đến với những người biết chờ đợi.',
-        price: 68.000,
+        price: 168.200,
         image: 'https://salt.tikicdn.com/cache/750x750/ts/product/ab/1e/96/f420ba84603be6a95b8f777d3bf0a5a6.png'
 )
 Book(
@@ -92,6 +92,6 @@ Book(
         author: 'Phan Ngân Hà',
         description: 'CUỐN SÁCH CHẤT CHỨA NHỮNG LỜI BIẾT ƠN KHÓ NÓI DÀNH CHO MẸ MÓN QUÀ GỬI TỚI TẤT CẢ NHỮNG NGƯỜI MẸ TRÊN THẾ GIAN NÀY!
 “Tôi thầm nghĩ khi đăm đăm nhìn theo bóng lưng mẹ, rằng mong mẹ hãy yêu lấy chính mình, giống như mẹ yêu tôi. Mong sao trong từng khoảnh khắc, dù là lúc rửa bát, dọn dẹp hay nấu cơm, mẹ cũng đừng quên bản thân là sự hiện diện vĩ đại, đáng quý và đẹp đẽ biết nhường nào. Tất cả những điều mẹ làm dưới danh xưng “mẹ” đều xứng đáng được trân trọng. ',
-        price: 73.100,
+        price: 173.100,
         image: 'https://salt.tikicdn.com/cache/750x750/ts/product/5d/3a/92/cd9316dbfc3764ad6f8e1b7b11dd0993.jpg'
 )

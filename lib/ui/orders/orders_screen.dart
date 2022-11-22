@@ -20,17 +20,10 @@ class _OrdersScreenState extends State<OrdersScreen> {
   @override
   void initState() {
     super.initState();
-    // _fetchOrders = context.read<OrderManager>().fetchOrders(isadmin);
   }
 
   @override
   Widget build(BuildContext context) {
-    // Map<String, dynamic> arguments =
-    // new Map<String, dynamic>.from(settings.arguments);
-    // page = MyRecordingScreen(title: arguments["title"], tags: arguments["user_name"], );
-    // bool args = set
-    // print(this.admin);
-    // print(widget.admin);
     return Consumer<AuthManager>(builder: (context, authManager, child) {
       isadmin = authManager.isAdmin;
       _fetchOrders = context.read<OrderManager>().fetchOrders(isadmin);

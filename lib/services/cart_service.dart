@@ -30,11 +30,6 @@ class CartService extends FirebaseService {
           'id': cartId,
           ...cart,
         }));
-        // print(cartId);
-        // print(CartItem.fromJsonCart({
-        //   'id': cartId,
-        //   ...cart,
-        // }));
       });
       return carts;
     } catch (error) {
@@ -80,7 +75,6 @@ class CartService extends FirebaseService {
   Future<bool> deleteCart(String id) async {
     try {
       final url = Uri.parse('$databaseUrl/cart/$userId/$id.json?auth=$token');
-      // print('2222');
       final response = await http.delete(url);
       if (response.statusCode != 200) {
         throw Exception(json.decode(response.body)['error']);
@@ -96,7 +90,6 @@ class CartService extends FirebaseService {
   Future<bool> deleteAllCart() async {
     try {
       final url = Uri.parse('$databaseUrl/cart/$userId.json?auth=$token');
-      // print('2222');
       final response = await http.delete(url);
       if (response.statusCode != 200) {
         throw Exception(json.decode(response.body)['error']);

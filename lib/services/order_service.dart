@@ -1,11 +1,7 @@
 import 'dart:convert';
 import 'package:book_app/models/order_item.dart';
 import 'package:http/http.dart' as http;
-
-import '../models/book.dart';
 import '../models/auth_token.dart';
-
-import '../models/cart_item.dart';
 import 'firebase_service.dart';
 
 class OrdersService extends FirebaseService {
@@ -56,10 +52,7 @@ class OrdersService extends FirebaseService {
       if (response.statusCode != 200) {
         throw Exception(json.decode(response.body)['error']);
       }
-      // print('2222');
-      return order.copyWith(
-          // id: 'o${DateTime.now().toIso8601String()}',
-          );
+      return order.copyWith();
     } catch (error) {
       print(error);
       return null;

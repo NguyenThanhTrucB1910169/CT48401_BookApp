@@ -63,6 +63,6 @@ class AuthManager with ChangeNotifier {
   }
 
   bool get isAdmin {
-    return (isAuth && _authToken!.userId == 'f9nFBeKSC6eDVzmHOuxpFrq7Xls1');
+    return (isAuth && _authToken!.userId == 'DzzFfebImieoInNf46NmschYOs73');
   }
 }

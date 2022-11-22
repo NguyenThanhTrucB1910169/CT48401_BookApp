@@ -50,12 +50,7 @@ class ProductsService extends FirebaseService {
       final url = Uri.parse('$databaseUrl/products.json?auth=$token');
       final response = await http.post(
         url,
-        body: json.encode(
-          product.toJson()
-            ..addAll({
-              'creatorId': userId,
-            }),
-        ),
+        body: json.encode(product.toJson()),
       );
 
       if (response.statusCode != 200) {

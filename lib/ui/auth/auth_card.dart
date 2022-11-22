@@ -197,19 +197,19 @@ class _AuthCardState extends State<AuthCard> {
             fillColor: Colors.white,
             // focusColor: Colors.white,
             focusedErrorBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
                 borderRadius: BorderRadius.circular(50.0)),
             errorBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
                 borderRadius: BorderRadius.circular(50.0)),
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
                 borderRadius: BorderRadius.circular(50.0)),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 134, 149, 147)),
                 borderRadius: BorderRadius.circular(50.0))),
         obscureText: true,
@@ -239,19 +239,19 @@ class _AuthCardState extends State<AuthCard> {
             fillColor: Colors.white,
             // focusColor: Colors.white,
             focusedErrorBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
                 borderRadius: BorderRadius.circular(50.0)),
             errorBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
                 borderRadius: BorderRadius.circular(50.0)),
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
                 borderRadius: BorderRadius.circular(50.0)),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 134, 149, 147)),
                 borderRadius: BorderRadius.circular(50.0))),
         obscureText: true,
@@ -284,19 +284,19 @@ class _AuthCardState extends State<AuthCard> {
             fillColor: Colors.white,
             // focusColor: Colors.white,
             focusedErrorBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
                 borderRadius: BorderRadius.circular(50.0)),
             errorBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
                 borderRadius: BorderRadius.circular(50.0)),
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 176, 207, 204)),
                 borderRadius: BorderRadius.circular(50.0)),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                     width: 2, color: Color.fromARGB(255, 134, 149, 147)),
                 borderRadius: BorderRadius.circular(50.0))),
         keyboardType: TextInputType.emailAddress,

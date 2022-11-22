@@ -48,13 +48,13 @@ Future<void> showAlertDialog(BuildContext context, String message) {
     context: context,
     builder: (ctx) => AlertDialog(
       title: Row(
-        children: <Widget>[
+        children: const <Widget>[
           Icon(
             Icons.warning_amber_rounded,
             size: 35,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 10),
+            padding: EdgeInsets.only(left: 10),
             child: Text(
               "Thông Báo",
               style: TextStyle(fontSize: 28),

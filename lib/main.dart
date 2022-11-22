@@ -2,16 +2,6 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-// import 'package:book_app/ui/auth/auth_screen.dart';
-// import 'package:book_app/ui/card/cart_manager.dart';
-// import 'package:book_app/ui/splash_screen.dart';
-// import 'ui/books/book_screen.dart';
-// import 'ui/card/cart_screen.dart';
-// import 'ui/orders/orders_screen.dart';
-// import 'ui/books/book_detail_screen.dart';
-// import 'ui/orders/order_manager.dart';
-// import 'ui/auth/auth_manager.dart';
-// import 'ui/books/books_manager.dart';
 import 'ui/shared/screens.dart';
 
 Future<void> main() async {
@@ -22,7 +12,6 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -79,9 +68,6 @@ class MyApp extends StatelessWidget {
 
                   // BookDetailScreen.routeName: (ctx) => const BookDetailScreen(),
                 },
-                // onGenerateRoute: (settings) {
-                //  if(settings.name == ProductsOverviewScreen.route)
-                // },
                 onGenerateRoute: (settings) {
                   if (settings.name == BookDetailScreen.routeName) {
                     final bookid = settings.arguments as String;
@@ -105,15 +91,6 @@ class MyApp extends StatelessWidget {
                       },
                     );
                   }
-                  // if (settings.name == OrdersScreen.routeName) {
-                  //   final args = settings.arguments as bool?;
-                  //   print(args);
-                  //   // return MaterialPageRoute(
-                  //   //   builder: (ctx) {
-                  //   //     return OrdersScreen(args);
-                  //   //   },
-                  //   // );
-                  // }
                   return null;
                 });
           },
